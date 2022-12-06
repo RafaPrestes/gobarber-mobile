@@ -4,14 +4,15 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 
 import { store, persistor } from './src/store'
+import App from './src/App'
 
-export default function App() {
+export default function Index() {
   return (
     <>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <StatusBar style='light' backgroundColor='#7159c1' />
-          <Routes />
+          <App />
         </PersistGate>
       </Provider>
     </>

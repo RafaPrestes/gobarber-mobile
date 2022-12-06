@@ -1,12 +1,12 @@
 import produce from 'immer'
 
-const INNITIAL_STATE = {
+const INITIAL_STATE = {
     token: null,
     signed: false,
     loading: false,
 }
 
-export default function auth(state = INNITIAL_STATE, action) {
+export default function auth(state = INITIAL_STATE, action) {
     return produce(state, draft => {
         switch (action.type) {
             case '@auth/SIGN_IN_REQUEST': {
