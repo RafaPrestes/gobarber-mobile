@@ -67,7 +67,11 @@ export function StackRoutes() {
                 name='confirm'
                 component={Confirm}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
+                    headerTitle: 'Confirmar agendamento',
+                    headerTintColor: '#fff',
+                    headerTitleAlign: 'center',
+                    headerTransparent: true,
                 }}
             />
         </Navigator>
