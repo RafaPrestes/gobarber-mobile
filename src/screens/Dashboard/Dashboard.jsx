@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
 import React, { useEffect, useState } from 'react'
+
 import Background from '../../components/Background'
 import Appointment from '../../components/Appointments'
 import api from '../../services/api'
@@ -17,8 +17,8 @@ export function Dashboard() {
 
       setAppointments(response.data)
     }
-    loadAppointments();
-  }, [])
+    loadAppointments(); 
+  }, [appointments])
 
   async function handleCancel(id) {
     const response = await api.delete(`appointments/${id}`)
