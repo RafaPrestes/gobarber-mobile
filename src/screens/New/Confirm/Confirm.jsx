@@ -8,7 +8,10 @@ import api from '../../../services/api'
 
 import { Container, Avatar, Name, Time, SubmitButton } from './styles'
 
+// recebendo o parametro da seleção de data/hora ( route )
 export function Confirm({ route, navigation }) {
+
+  // pegando os dados passados por parâmetro da tela anterior
   const provider = route.params.provider
   const time = route.params.time
 
@@ -27,6 +30,7 @@ export function Confirm({ route, navigation }) {
     })
   }, [time])
 
+  // função que envia pro banco o id do prestador e o horário do agendamento
   async function handleAddAppointment() {
     await api.post('appointments', {
       provider_id: provider.id,
